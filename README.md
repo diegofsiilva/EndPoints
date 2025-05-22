@@ -45,7 +45,7 @@ Essa rota pega todos os alunos de um determinado curso e devolve algo assim:
 ### Qual a importância de usar HTML básico com formulários e tabelas para organizar e manipular dados no navegador?
 ### Por que esse tipo de estrutura ainda é útil em projetos back-end com Node.js?
 <br>
-HTML básico ainda é super útil, especialmente em projetos back-end com Node.js. Ele é fácil de entender, funciona em qualquer navegador, e é rápido de implementar.
+HTML básico ainda é bom, no projeto back-end como o nosso com Node.js. Ele é fácil de entender, funciona em qualquer navegador, e é rápido de implementar.
 <br>
 No seu projeto, quando a gente vai cadastrar um aluno ou professor, usamos um formulário HTML simples com campos de nome e e-mail. A pessoa preenche e envia. Pronto: o servidor já recebe esses dados e salva no banco.
 <br>
