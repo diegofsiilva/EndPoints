@@ -28,7 +28,7 @@ o View é o que o usuário realmente vê no navegador. É o HTML com formulário
 ### Cite uma rota que responde em JSON e explique seu funcionamento.
 
 <br>
-No seu projeto com Node.js, os dados em formato JSON são usados quando você não quer exibir uma página HTML, mas sim enviar informações “cruas”
+No projeto o Node.js, os dados em formato JSON são usados quando você não quer exibir uma página HTML, mas sim enviar informações “cruas”
 <br>
 GET /alunos/curso/:curso_id
 Essa rota pega todos os alunos de um determinado curso e devolve algo assim:
