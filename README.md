@@ -1,4 +1,55 @@
 
+### Explique com suas palavras o papel de cada camada da arquitetura MVC usada neste projeto.
+### Como o Model, o Controller e a View interagem entre si?Como o Model, o Controller e a View interagem entre si?
+ 
+<br>
+Model – responsável pelo banco de dados
+Ele é o responsável por conversar com o banco de dados. Toda vez que a gente precisa criar, buscar ou atualizar algo no PostgreSQL, o Model que cuida disso.
+<br>
+const result = await db.query('SELECT * FROM aluno ORDER BY id ASC');
+<br>
+Isso aí é o Model buscando todos os alunos direto do banco de dados
+<br>
+Controller – a ponte entre o model e o view
+O Controller recebe as ações do usuário e decide o que fazer com elas. Ele pega os dados que vem da View, manda pro Model salvar, e depois mostra o resultado de volta pra View.
+<br>
+const alunos = await Aluno.findAllComCurso();
+res.render('alunos/index', { alunos });
+<br>
+Ele pede pro Model buscar os dados e depois manda esses dados pra View mostrar.
+<br>
+View – a parte visual
+o View é o que o usuário realmente vê no navegador. É o HTML com formulários, tabelas, etc. Ele só exibe os dados, não toma decisões nem fala com o banco.
+
+<br>
+<br>
+
+### Como ocorre o envio e o recebimento de dados no formato JSON neste projeto?
+### Cite uma rota que responde em JSON e explique seu funcionamento.
+
+<br>
+No seu projeto com Node.js, os dados em formato JSON são usados quando você não quer exibir uma página HTML, mas sim enviar informações “cruas”
+<br>
+GET /alunos/curso/:curso_id
+Essa rota pega todos os alunos de um determinado curso e devolve algo assim:
+<br>
+[
+  { "id": 1, "nome": "João", "email": "joao@email.com" },
+  { "id": 2, "nome": "Ana", "email": "ana@email.com" }
+]
+
+
+<br>
+<br>
+
+### Qual a importância de usar HTML básico com formulários e tabelas para organizar e manipular dados no navegador?
+### Por que esse tipo de estrutura ainda é útil em projetos back-end com Node.js?
+<br>
+HTML básico ainda é super útil, especialmente em projetos back-end com Node.js. Ele é fácil de entender, funciona em qualquer navegador, e é rápido de implementar.
+<br>
+No seu projeto, quando a gente vai cadastrar um aluno ou professor, usamos um formulário HTML simples com campos de nome e e-mail. A pessoa preenche e envia. Pronto: o servidor já recebe esses dados e salva no banco.
+<br>
+<br>
 
 # Boilerplate MVC em Node.js com PostgreSQL
 
